@@ -61,11 +61,7 @@ need a refresher on this.
 We’ll use the following packages during this exercise:  
 
 ```r
-install.packages(c(
-  "tidyverse",  # dplyr, ggplot2, readr, etc.
-  "readxl",     # read Excel data
-  "janitor"     # clean up column names
-))
+install.packages("tidyverse") #contains dplyr, ggplot2, readr, etc.
 ```
 ---
 
