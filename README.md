@@ -38,7 +38,7 @@ At each plot, field crews:
 - Tag and identify trees to species (using internal species codes).  
 - Map all trees using distance and azimuth (which we can convert to XY coordinates).  
 
-<img src="img/ltm-plot-diagram.jpg" width=400"></img>
+<img src="img/ltm-plot-diagram.jpg" width="400"></img>
 
 Schematic of a single LTM plot. All of the data we are working with come 
 from the 18 m diameter **Subplot 1**
