@@ -89,14 +89,25 @@ You’ll be divided into **4 groups**, each tackling a coding task:
 
 Data for the exercise can be found here:
 
-`'R:/landscape_ecology/codeblitz/codeblitz2/ltm-data.csv'`
+`R:/landscape_ecology/codeblitz/codeblitz2/ltm-data.csv`
 
 ### Group 1: Species Lookup
 - Write an R function to convert **species codes → full names**  
 - Input: vector of species codes  
 - Output: species names  
 - Add error checking (e.g., bad inputs)  
-- Make it **case insensitive** (bonus)  
+- Make it **case insensitive** (bonus)
+- You can find the lookup table of a species list here: `R:/landscape_ecology/codeblitz/codeblitz2/veglist_2006.csv`
+There are a few special cases missing from the list:
+
+```
+PIST = pine stump
+PISN = pine snag
+HWST= hardwood stump
+HWSN = hardwood snag
+JUST = cedar stump
+JUSN = cedar snag
+```
 
 ### Group 2: Basal Area
 - Write an R function to calculate **basal area (m²/ha)**  
@@ -107,8 +118,12 @@ Data for the exercise can be found here:
 - Write an R function to calculate **QMD at the plot level**  
 
 ### Group 4: Canopy Cover
-- Write an R function to summarize **canopy cover** at the plot level  
-- Use densiometer measurements (usually an average of 4 readings per plot)  
+- Write an R script that compiles **canopy cover** measurements at the plot level  
+- Using densiometer measurements (usually an average of 4 readings per plot) 
+- Be sure to appropriately extract the year. 
+- Make a table of `plotID | canopy | year |` so that we can link it to 
+other data.
+- Canopy cover data is here: `R:/landscape_ecology/codeblitz/codeblitz2/canopy-data.csv`
 
 ### Dataset Output Guidance
 
@@ -171,12 +186,6 @@ calc_qmd <- function(dbh_cm) {
   # input: numeric vector of DBH per plot
   # output: numeric QMD in cm
 }
-
-# Canopy cover
-avg_canopy <- function(readings) {
-  # input: numeric vector of 4 readings
-  # output: average canopy cover (%)
-}
 ```
 
 | Function | Input | Output | Notes / Error Handling |
@@ -184,7 +193,6 @@ avg_canopy <- function(readings) {
 | **Species Lookup** | Vector of species codes (character) | Vector of full species names (character) | Should handle unknown codes (`NA`) and ignore case |
 | **Basal Area (BA)** | Vector of DBH (cm) | Numeric basal area in m²/ha | Remove NAs; DBH must be numeric |
 | **Quadratic Mean Diameter (QMD)** | Vector of DBH (cm) per plot | Numeric QMD (cm) | Remove NAs; return NA if no trees |
-| **Canopy Cover** | Vector of densiometer readings per plot | Numeric canopy cover (%) | Usually average of 4 readings; remove NAs |
 
 ---
 

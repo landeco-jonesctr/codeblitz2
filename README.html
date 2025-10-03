@@ -468,7 +468,7 @@ code</li>
 <p>You’ll be divided into <strong>4 groups</strong>, each tackling a
 coding task:</p>
 <p>Data for the exercise can be found here:</p>
-<p><code>&#39;R:/landscape_ecology/codeblitz/codeblitz2/ltm-data.csv&#39;</code></p>
+<p><code>R:/landscape_ecology/codeblitz/codeblitz2/ltm-data.csv</code></p>
 <div id="group-1-species-lookup" class="section level3">
 <h3>Group 1: Species Lookup</h3>
 <ul>
@@ -482,7 +482,16 @@ names</strong><br />
 <li>Add error checking (e.g., bad inputs)<br />
 </li>
 <li>Make it <strong>case insensitive</strong> (bonus)</li>
+<li>You can find the lookup table of a species list here:
+<code>R:/landscape_ecology/codeblitz/codeblitz2/veglist_2006.csv</code>
+There are a few special cases missing from the list:</li>
 </ul>
+<pre><code>PIST = pine stump
+PISN = pine snag
+HWST= hardwood stump
+HWSN = hardwood snag
+JUST = cedar stump
+JUSN = cedar snag</code></pre>
 </div>
 <div id="group-2-basal-area" class="section level3">
 <h3>Group 2: Basal Area</h3>
@@ -505,11 +514,16 @@ level</strong></li>
 <div id="group-4-canopy-cover" class="section level3">
 <h3>Group 4: Canopy Cover</h3>
 <ul>
-<li>Write an R function to summarize <strong>canopy cover</strong> at
-the plot level<br />
+<li>Write an R script that compiles <strong>canopy cover</strong>
+measurements at the plot level<br />
 </li>
-<li>Use densiometer measurements (usually an average of 4 readings per
+<li>Using densiometer measurements (usually an average of 4 readings per
 plot)</li>
+<li>Be sure to appropriately extract the year.</li>
+<li>Make a table of <code>plotID | canopy | year |</code> so that we can
+link it to other data.</li>
+<li>Canopy cover data is here:
+<code>R:/landscape_ecology/codeblitz/codeblitz2/canopy-data.csv</code></li>
 </ul>
 </div>
 <div id="dataset-output-guidance" class="section level3">
@@ -575,12 +589,6 @@ calc_ba &lt;- function(dbh_cm) {
 calc_qmd &lt;- function(dbh_cm) {
   # input: numeric vector of DBH per plot
   # output: numeric QMD in cm
-}
-
-# Canopy cover
-avg_canopy &lt;- function(readings) {
-  # input: numeric vector of 4 readings
-  # output: average canopy cover (%)
 }</code></pre>
 <table>
 <colgroup>
@@ -615,12 +623,6 @@ avg_canopy &lt;- function(readings) {
 <td>Vector of DBH (cm) per plot</td>
 <td>Numeric QMD (cm)</td>
 <td>Remove NAs; return NA if no trees</td>
-</tr>
-<tr class="even">
-<td><strong>Canopy Cover</strong></td>
-<td>Vector of densiometer readings per plot</td>
-<td>Numeric canopy cover (%)</td>
-<td>Usually average of 4 readings; remove NAs</td>
 </tr>
 </tbody>
 </table>

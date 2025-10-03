@@ -28,3 +28,19 @@ all_dat = select(all_dat, uniqueId, `plotId`, `treeNumber`, year, species, dbh, 
 
 #write to codeblitz folder
 write_csv(all_dat, 'R:/landscape_ecology/codeblitz/codeblitz2/ltm-data.csv')
+
+
+library(tidyverse)
+cc = read_csv('C:/Users/jeffery.cannon/Downloads/Plot Visits.csv')
+cc = select(cc, Plotdate, `Plot Id`, Canopy) %>%
+  mutate(plotDate = Plotdate, plotId = `Plot Id`, canopy = Canopy) %>%
+  select(plotDate, plotId, canopy) %>%
+  mutate(year = substr(plotDate, nchar(plotDate)-3, nchar(plotDate))) %>%
+  filter(year > 2012)
+
+cc = cc %>% select(!year)
+
+write_csv(cc, 'R:/landscape_ecology/codeblitz/codeblitz2/canopy-data.csv')
+
+
+
