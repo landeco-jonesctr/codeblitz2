@@ -206,14 +206,19 @@ Now, let’s apply what you built to the main dataset (on the R drive).
 
 * Team Root: Calculate total BA for all plots by year
 * Team Shoot: Calculate density for all plots by year
-* Team Bark: Calculate QMD for all plots by year
+* Team Bark: Calculate QMD for all plots by years
 * For all teams:
   - Make a graph of your average statistic by year
   - Make another graph of your statistic by year for the 5 major species
   - (Bonus) Add standard error bars
 
-Hint, for summarizing data use the `tidyverse` package which contains
+**Hints**
+
+* For summarizing data use the `tidyverse` package which contains
 the function `group_by` and `summarize`
+* You'll find plot-level coordinates in the canopy cover data here:
+`R:/landscape_ecology/codeblitz/codeblitz2/canopy-data.csv`. You may
+need to use the `merge` functions in `tidyverse`.
 
 ```
 # choose the dataset and the groups you want to summarize by

@@ -32,9 +32,10 @@ write_csv(all_dat, 'R:/landscape_ecology/codeblitz/codeblitz2/ltm-data.csv')
 
 library(tidyverse)
 cc = read_csv('C:/Users/jeffery.cannon/Downloads/Plot Visits.csv')
-cc = select(cc, Plotdate, `Plot Id`, Canopy) %>%
-  mutate(plotDate = Plotdate, plotId = `Plot Id`, canopy = Canopy) %>%
-  select(plotDate, plotId, canopy) %>%
+cc = select(cc, Plotdate, `Plot Id`, Canopy, Xcoordinate, Ycoordinate) %>%
+  mutate(plotDate = Plotdate, plotId = `Plot Id`, canopy = Canopy,
+         utmX = Xcoordinate, utmY = Ycoordinate) %>%
+  select(plotDate, plotId, utmX, utmY, canopy) %>%
   mutate(year = substr(plotDate, nchar(plotDate)-3, nchar(plotDate))) %>%
   filter(year > 2012)
 

@@ -640,7 +640,7 @@ drive access.</p>
 <ul>
 <li>Team Root: Calculate total BA for all plots by year</li>
 <li>Team Shoot: Calculate density for all plots by year</li>
-<li>Team Bark: Calculate QMD for all plots by year</li>
+<li>Team Bark: Calculate QMD for all plots by years</li>
 <li>For all teams:
 <ul>
 <li>Make a graph of your average statistic by year</li>
@@ -649,9 +649,16 @@ species</li>
 <li>(Bonus) Add standard error bars</li>
 </ul></li>
 </ul>
-<p>Hint, for summarizing data use the <code>tidyverse</code> package
-which contains the function <code>group_by</code> and
-<code>summarize</code></p>
+<p><strong>Hints</strong></p>
+<ul>
+<li>For summarizing data use the <code>tidyverse</code> package which
+contains the function <code>group_by</code> and
+<code>summarize</code></li>
+<li>You’ll find plot-level coordinates in the canopy cover data here:
+<code>R:/landscape_ecology/codeblitz/codeblitz2/canopy-data.csv</code>.
+You may need to use the <code>merge</code> functions in
+<code>tidyverse</code>.</li>
+</ul>
 <pre><code># choose the dataset and the groups you want to summarize by
 mydata = group_by(mydata, Plot, Year)
 
