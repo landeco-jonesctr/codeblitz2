@@ -22,5 +22,6 @@ convert_species <- function(codes, sp_list) {
   sp_list$commonName[match(codes_lower, sp_list$code)]
 }
 
+#checking does it work?
 sp_codes <- c("ACRU", "ACSA")
 convert_species(sp_codes, sp_list)
