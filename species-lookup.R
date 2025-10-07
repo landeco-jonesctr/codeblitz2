@@ -29,5 +29,5 @@ convert_species <- function(codes, sp_list) {
 }
 
 #checking does it work?
-sp_codes <- c("ACRU", "ACSA", "PISN")
+sp_codes <- c("ACRU", "ACSA", "PISN", "banana")
 convert_species(sp_codes, sp_list)
