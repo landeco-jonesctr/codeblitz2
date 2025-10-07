@@ -6,7 +6,6 @@
 library(dplyr)
 
 ## Task - Species Lookup
-
 sp_list_raw <- read.csv("R:/landscape_ecology/codeblitz/codeblitz2/veglist_2006.csv")
 
 ### new codes to add to sp_list
@@ -19,6 +18,7 @@ new_rows <- data.frame(code = newcodes, commonName= newnames,
 
 sp_list <- rbind(sp_list_raw, new_rows)
 
+## function to pull species codes from sp_list 
 convert_species <- function(codes, sp_list) {
   # make lookup case-insensitive
   sp_list$code <- tolower(sp_list$code)
