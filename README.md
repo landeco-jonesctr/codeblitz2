@@ -6,8 +6,8 @@ This is a team exercise designed to help us get more comfortable with
 **collaborative coding in R** and **using GitHub** for ecological problem-solving.  
 
 This Code Blitz helps us build reusable tools and skills that will ultimately 
-allow us to process LiDAR and forest monitoring data efficiently. The code here
-will  build toward a lab project where we use **aerial LiDAR data** to provide
+allow us to process lidar and forest monitoring data efficiently. The code here
+will  build toward a lab project where we use **aerial lidar data** to provide
 detailed assessments of **basal area, density, and tree size** across all of 
 the property for multiple years. This will be  valuable contribution to research
 and conservation departments.
