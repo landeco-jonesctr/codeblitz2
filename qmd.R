@@ -5,10 +5,10 @@ library(ggplot2)
 ltm <- read.csv("R:/landscape_ecology/codeblitz/codeblitz2/ltm-data.csv")
 
 # QMD
-calc_qmd <- function(dbh) {
+calc_qmd <- function(dbh,dbh_threshold=10) {
   if(!is.numeric(dbh)) stop("dbh must be numeric.")
   
-  dbh_cm <- dbh[!is.na(dbh) & dbh>=10]
+  dbh_cm <- dbh[!is.na(dbh) & dbh>=dbh_threshold]
   qmd <- sqrt(mean(dbh_cm^2))
   
   return(qmd)
