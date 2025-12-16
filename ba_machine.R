@@ -68,7 +68,7 @@ ggplot(data = avg_yrsp_ba, aes(x = year, y = mean_ba)) +
   scale_x_continuous(breaks = seq(from = 2000, to = 2025, by = 2)) +
   labs(y = "Mean Basal Area", x = "Year", title = "LTM Plots: Average basal area of top 5 species in all plot over time") +
   theme_bw()
-
+#test
 
 
 
