@@ -1,0 +1,25 @@
+---
+title: "CodeBlitz2"
+author: "Zark Zarling"
+date: "2026-05-27"
+output: word_document
+---
+
+```{r}
+library(tidyverse)
+
+LMTdata <- read.csv("R:/landscape_ecology/codeblitz/codeblitz2/ltm-data.csv")
+code_key <- read.csv("R:/landscape_ecology/codeblitz/codeblitz2/veglist_2006.csv")
+```
+
+
+## species lookup
+
+```{r}
+code_swap <- function(x) {
+  if(x == code_key$code)
+    x = 
+  
+}
+```
+
